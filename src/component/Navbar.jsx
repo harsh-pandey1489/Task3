@@ -41,10 +41,10 @@ const Navbar = () => {
 
                             <ul className="space-y-3 text-xl text-center">
                                 <li onClick={() => { setHambeger(!hamOpen), setCategory("all") }} className="cursor-pointer"> All</li>
-                                <li onClick={() => { setHambeger(!hamOpen), setCategory("all") }} className="cursor-pointer"> Beauty</li>
-                                <li onClick={() => { setHambeger(!hamOpen), setCategory("all") }} className="cursor-pointer">Fragrances</li>
-                                <li onClick={() => { setHambeger(!hamOpen), setCategory("all") }} className="cursor-pointer">Furniture</li>
-                                <li onClick={() => { setHambeger(!hamOpen), setCategory("all") }} className="cursor-pointer">Groceries </li>
+                                <li onClick={() => { setHambeger(!hamOpen), setCategory("beauty") }} className="cursor-pointer"> Beauty</li>
+                                <li onClick={() => { setHambeger(!hamOpen), setCategory("fragrances") }} className="cursor-pointer">Fragrances</li>
+                                <li onClick={() => { setHambeger(!hamOpen), setCategory("furniture") }} className="cursor-pointer">Furniture</li>
+                                <li onClick={() => { setHambeger(!hamOpen), setCategory("groceries") }} className="cursor-pointer">Groceries </li>
                             </ul>
                         </div>
                     )
