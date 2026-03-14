@@ -1,3 +1,4 @@
+"use client"
 import React, { useContext } from 'react'
 import { ProductContext } from "@/context/ProductContext";
 
@@ -17,7 +18,7 @@ const Dashboard = () => {
             onChange={handleChange}
             className="w-full p-3 border rounded-md  text-lg cursor-pointer  border-blue-500 outline-none "
           >
-            <option>All</option>
+            <option value='all'>All</option>
            {
             selectdata.map((item)=>(
                 <option key={item} value={item} >{item.toUpperCase()}</option>

@@ -23,7 +23,7 @@
             <div key={item.id} className='p-5 border overflow-hidden xl:w-[300px] xl:h-[290px] w-[250px] h-[260px] flex items-center flex-col rounded-xl transition-transform ease-in-out duration-500 hover:scale-102 hover:border-2 hover:border-blue-600'>
                 
                   <div className='w-[120px] h-[120px]'>
-                    <img  className='object-cover ' src={item.images}/>
+                    <img  className='object-cover ' src={item.images[0]}/>
                 </div>
                    <h1 className='text-lg font-semibold text-center mt-auto '>{item.title}</h1>
                      <Link href={`/product/${item.id}`} >
