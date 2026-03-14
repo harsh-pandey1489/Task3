@@ -36,11 +36,11 @@ if (sort==="price-low"){
 if (sort==="price-high"){
   sortedData.sort((a,b)=>b.price-a.price);
 }
-if (sort === "title-asc") {
+if (sort==="title-asc") {
   sortedData.sort((a,b)=>a.title.localeCompare(b.title));
 }
 
-if (sort === "title-desc") {
+if (sort==="title-desc") {
   sortedData.sort((a,b)=>b.title.localeCompare(a.title));
 }
 
@@ -48,7 +48,7 @@ if (sort === "title-desc") {
 
     <ProductContext.Provider
       value={{
-        filterdata:sortedData,
+        sortedData,
         setCategory,
         search,
         setSearch,

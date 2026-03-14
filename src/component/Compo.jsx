@@ -4,8 +4,8 @@
 import { ProductContext } from '@/context/ProductContext';
 
  const Compo = () => {
- const {setSearch,search, filterdata,}=useContext(ProductContext);
- console.log(filterdata)
+ const {setSearch,search, sortedData,}=useContext(ProductContext);
+
   
    return (
      <div className='max-w-[1720px] mx-auto flex flex-col items-center justify-center py-20'>
@@ -19,7 +19,7 @@ import { ProductContext } from '@/context/ProductContext';
   />
         <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:mx-20 gap-6 justify-center items-center'>
        {
-        filterdata?.map((item)=>(
+        sortedData?.map((item)=>(
             
   <Link key={item.id} href={`/product/${item.id}`} >
             <div  className='border overflow-hidden xl:w-[300px] xl:h-[300px] w-[250px] h-[290px] flex items-center flex-col rounded-xl transition-transform ease-in-out duration-500 hover:scale-102 hover:border-2 hover:border-blue-600'>
