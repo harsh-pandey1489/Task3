@@ -2,6 +2,7 @@
 import { ProductContext } from '@/context/ProductContext';
 import React, { useContext, useState } from 'react'
 import { FiMenu, FiX } from "react-icons/fi";
+ import Link from "next/link";
 
 const Navbar = () => {
     const { setCategory }=useContext(ProductContext)
@@ -10,7 +11,7 @@ const Navbar = () => {
     return (
         <nav className='max-w-[1720px] w-full fixed z-50 mx-auto  '>
             <div className='flex flex-row justify-between items-center py-8 bg-gray-800'>
-                <h1 className='text-white text-3xl font-bold ml-20'>Product</h1>
+             <Link href={'/'} >  <h1 className='text-white text-3xl font-bold ml-20'>Product</h1></Link> 
                 <ul className='hidden md:flex flex-row gap-20 text-xl text-white mr-20'>
                     <li onClick={() => setCategory("all")} className="cursor-pointer"> All</li>
 

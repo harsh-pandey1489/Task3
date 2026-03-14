@@ -24,12 +24,12 @@ export default function Page() {
         return <p className="p-20">Loading...</p>
     }
     return (
-        <div className=" flex justify-center items-center max-w-[1720px] mx-auto  ">
-            
-            <div className="xl:max-w-[650px] flex items-center flex-col  shadow-2xl text-black rounded-2xl py-4 px-6 mt-10 border-2 border-blue-500 mx-20">
+         <div className=" flex justify-center items-center max-w-[1720px] mx-auto  ">
+            <Link href={`/`} >
+                <div className="xl:max-w-[650px] flex items-center flex-col  shadow-2xl text-black rounded-2xl py-4 px-6 mt-10 border-2 border-blue-500 mx-20">
 
                 <img src={product.images[0]}
-                    className="w-[300px]" />
+                    className="w-[270px]" />
                 <h1 className="text-2xl font-bold mb-5 text-center"> {product.title} </h1>
 
 
@@ -46,6 +46,8 @@ export default function Page() {
                 </Link>
 
             </div>
+            </Link>
+           
         </div>
     );
 }
