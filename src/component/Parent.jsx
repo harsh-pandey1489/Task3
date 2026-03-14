@@ -10,6 +10,7 @@ export default function Parent({ children }) {
   const [product, setproduct] = useState([]);
   const [category, setCategory] = useState("all");
   const [search, setSearch] = useState("");
+  const [sort,setSort]=useState("default")
 
   const fetchData = async () => {
     const response =await fetch("https://dummyjson.com/products");
@@ -26,20 +27,37 @@ export default function Parent({ children }) {
     .filter((item)=>
       item.title.toLowerCase().includes(search.toLowerCase())
     );
+    let sortedData = [...filterdata];
+
+if (sort==="price-low"){
+  sortedData.sort((a,b)=>a.price-b.price);
+}
+
+if (sort==="price-high"){
+  sortedData.sort((a,b)=>b.price-a.price);
+}
+if (sort === "title-asc") {
+  sortedData.sort((a,b)=>a.title.localeCompare(b.title));
+}
+
+if (sort === "title-desc") {
+  sortedData.sort((a,b)=>b.title.localeCompare(a.title));
+}
 
   return (
 
     <ProductContext.Provider
       value={{
-        filterdata,
+        filterdata:sortedData,
         setCategory,
         search,
         setSearch,
-        product
+        product,
+        setSort
       }}
     >
 
-      <Navbar setCategory={setCategory} />
+      <Navbar  />
 
       <div className="pt-[100px] relative">
 
